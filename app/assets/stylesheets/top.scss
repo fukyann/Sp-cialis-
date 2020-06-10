@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.top{
+  width: 100vw;
+  height: 100vh;
+  font-size: 150px;
+  line-height: 350px;
+  background: url(3506865_m.jpg);
+  background-size: cover;
+  font-family: 'Sacramento', cursive;
+  font-weight: bold;
+  text-align: center;
+  text-shadow:  4px  4px 20px black;
+  color: white;
+  .sentence{
+    height: 20px;
+    font-size: 30px;
+    line-height: 0px;
+    transform   : skewX(19deg);   
+    
+  }
+  .user{ 
+   display: flex;
+   justify-content: center;
+   text-shadow:  4px  4px 20px white;
+   
+   .chef{
+     height: 300px;
+     width: 300px;
+     font-size: 30px;
+     margin-right: 20px;
+     background-color: #e8ddbd; 
+     box-shadow: inset 0 0 40px rgba(204, 186, 136,1), 0 2px 2px #ccc;
+     .pastry{
+       height: 40px;
+       line-height: 200px;
+       color:#770000;
+     }
+     &__btn{
+       text-decoration: none;
+       color: #770000;
+       border-radius: 3px;
+       transition: .4s;
+       font-family: "Sawarabi Mincho"; 
+     }
+     &__btn:hover {
+      color: #FFF;
+    }  
+   }
+   .customer{
+     height: 300px;
+     width: 300px;
+     font-size: 30px;
+     background-color: #e8ddbd; 
+     box-shadow: inset 0 0 40px rgba(204, 186, 136,1), 0 2px 2px #ccc;
+     .human{
+      height: 40px;
+      line-height: 200px;
+      color: #770000;
+    }
+    &__btn{
+      text-decoration: none;
+      color: #770000;
+      border-radius: 3px;
+      transition: .4s;
+    }
+    &__btn:hover {
+      color: #FFF;
+    }  
+  }   
+ }
+}

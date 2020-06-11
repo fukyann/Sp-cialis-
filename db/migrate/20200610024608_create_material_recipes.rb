@@ -1,4 +1,4 @@
-class CreateMaterialRacipes < ActiveRecord::Migration[5.2]
+class CreateMaterialRecipes < ActiveRecord::Migration[5.2]
   def change
     create_table :material_racipes do |t|
       t.references :material, foreign_key: true

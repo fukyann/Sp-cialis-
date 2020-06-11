@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_10_024608) do
+ActiveRecord::Schema.define(version: 2020_06_11_062320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_024608) do
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
   end
 
-  create_table "material_racipes", force: :cascade do |t|
+  create_table "material_recipes", id: :bigint, default: -> { "nextval('material_racipes_id_seq'::regclass)" }, force: :cascade do |t|
     t.bigint "material_id"
     t.bigint "recipe_id"
     t.datetime "created_at", null: false
@@ -81,14 +81,16 @@ ActiveRecord::Schema.define(version: 2020_06_10_024608) do
     t.bigint "chef_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "explanation"
+    t.text "make"
     t.index ["chef_id"], name: "index_recipes_on_chef_id"
     t.index ["material_id"], name: "index_recipes_on_material_id"
   end
 
   add_foreign_key "comments", "chefs"
   add_foreign_key "comments", "customers"
-  add_foreign_key "material_racipes", "materials"
-  add_foreign_key "material_racipes", "recipes"
+  add_foreign_key "material_recipes", "materials"
+  add_foreign_key "material_recipes", "recipes"
   add_foreign_key "materials", "chefs"
   add_foreign_key "recipes", "chefs"
 end

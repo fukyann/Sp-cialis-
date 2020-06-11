@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
-  def show
+  def index
     
   end
 end

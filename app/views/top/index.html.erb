@@ -11,13 +11,13 @@
 
   <body>
    <div class="top">
-      ~Spécialisé~
+      SpCialis
       <div class="sentence"> 〜こだわりの一品を、伝える、広める。〜</div>
       <div class="user">
         <div class="chef">
           <p class="pastry">パティシエとして</p>
           <% if chef_signed_in? %>
-             <%= link_to "マイページ", chefs_show_path, class: "chef__btn" %>
+             <%= link_to "マイページ", chefs_path, class: "chef__btn" %>
           <% else %>
             <%= link_to "ログイン", new_chef_session_path, class: "chef__btn" %>
             <%= link_to "新規登録", new_chef_registration_path, class: "chef__btn" %>
@@ -26,7 +26,7 @@
         <div class="customer">
           <p class="human">お客様として</p>
           <% if customer_signed_in? %>
-              <%= link_to "みんなのレシピ", customers_show_path, class: "customer__btn" %>
+              <%= link_to "みんなのレシピ", customers_path, class: "customer__btn" %>
           <% else %>
             <%= link_to "ログイン", new_customer_session_path, class: "customer__btn" %>
             <%= link_to "新規登録", new_customer_registration_path, class: "customer__btn" %>

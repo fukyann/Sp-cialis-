@@ -14,13 +14,15 @@
   font-weight: bold;
   text-align: center;
   text-shadow:  4px  4px 20px black;
-  color: white;
+  color:  #DA8E00;
+  
+ 
   .sentence{
     height: 20px;
     font-size: 30px;
     line-height: 0px;
     transform   : skewX(19deg);   
-    
+    color: white;
   }
   .user{ 
    display: flex;

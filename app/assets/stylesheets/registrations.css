@@ -1,0 +1,21 @@
+.back-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("1868573_1920.jpg");
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+
+.login {
+  background-color: blue;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 560px;
+  height: 400px;
+  width: 250px;
+  background-color: #e8ddbd;
+  -webkit-box-shadow: inset 0 0 40px #ccba88, 0 2px 2px #ccc;
+          box-shadow: inset 0 0 40px #ccba88, 0 2px 2px #ccc;
+}
+/*# sourceMappingURL=registrations.css.map */

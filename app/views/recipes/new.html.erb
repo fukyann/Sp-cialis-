@@ -1,0 +1,49 @@
+<div class="side-bar">
+  category
+   <%= link_to "材料登録", new_material_path, class: "recipe" %>
+   <%= link_to "レシピ作成", new_recipe_path, class: "recipe" %>
+   <%= link_to "みんなのレシピ", chefs_path, class: "recipe" %>
+</div>
+
+<div class="main">
+  <%= form_with model: @recipe, local: true do |f| %>
+    <div class="cake">
+      <div class="image">
+        <%= f.file_field :image, class:'image_btn'%>
+      </div>
+       
+      <div class="name">
+        <%= f.text_field :name, class: 'title', placeholder: '~ 商品名 ~' %>
+        <div class="explanation">
+          <%= f.text_area :explanation, class: 'explanation', placeholder: '~ 商品紹介 ~'%>
+        </div>
+      </div>
+      <div class="frame">
+        <div class="vaiue">
+          <table id="table" border="1">        
+            <tr>
+              <td>材料名
+              </td>
+              <td>量(g)
+              </td>
+              <td>原価
+              </td>
+            </tr>
+            <tr>
+              <td> <%= f.text_field :material, class:"column"%>
+              </td>
+              <td><%= f.number_field :amount, class:"column" %>
+              </td>
+              <td> <%= f.number_field :cost, class:"column"%>
+              </td>
+            </tr>
+          </table>  
+           <%= f.submit '保存する'%>
+        </div>
+        <div class="make">
+          <%= f.text_area :make, class: 'make', placeholder:'~ 作り方 ~'%>
+        </div>
+      </div>
+    </div>  
+  <% end %>  
+</div>

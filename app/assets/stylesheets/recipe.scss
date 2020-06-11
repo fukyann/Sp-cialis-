@@ -1,0 +1,58 @@
+.cake{
+  height:1000px;
+  width: 900px;
+  padding:50px;
+  color: #606060;
+  border: 2px solid #a3703e;
+  background-color: #fff;
+  box-shadow: -2px 15px 15px #ffffff;
+  border-radius: 15px;
+
+  .image{
+    
+    height: 250px;
+    width: 250px;
+    border: 1px solid;
+    float: left;
+    &_btn{
+      margin-top: 270px;
+    }
+  }
+  .name{
+    font-size: 30px;
+    width: 400px;
+    float: left;
+    margin-left: 50px;
+    .title{
+      margin-right: 50px;
+    }
+    .explanation{
+      font-size: 15px;
+      height: 150px;
+      width: 400px;
+      margin-top:20px
+    }
+  } 
+  .frame{
+    display: flex;
+    margin-top: 350px;
+    .vaiue{
+     
+      width: 375px;
+      height: 500px;
+      margin-right: 50px;
+      overflow: scroll;
+      #table{
+        background-color: white;
+      }
+      .column{
+        width: 120px;
+      }
+    } 
+    .make{
+    
+      width: 375px;
+      height: 500px;
+    }
+  }  
+}

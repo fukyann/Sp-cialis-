@@ -1,0 +1,23 @@
+.main {
+  background-image: url("3506860_m.jpg");
+  height: 100vh;
+  width: calc(100vw - 300px);
+  float: left;
+}
+
+.main #table1 {
+  background-color: white;
+  height: 600px;
+  width: 400px;
+  margin-left: 200px;
+  border: 2px solid #a3703e;
+  background-color: #fff;
+  -webkit-box-shadow: -2px 15px 15px #ffffff;
+          box-shadow: -2px 15px 15px #ffffff;
+  border-radius: 15px;
+}
+
+.main .btn {
+  margin-left: 200px;
+}
+/*# sourceMappingURL=material.css.map */

@@ -4,6 +4,9 @@ class MaterialsController < ApplicationController
   end
   def create
     @material = Material.new(material_params)
+  end 
+  
+  def show
   end  
 
   private

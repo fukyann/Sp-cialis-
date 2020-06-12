@@ -1,137 +1,30 @@
 <div class="side-bar">
   category
-   <%= link_to "材料登録", new_material_path, class: "recipe" %>
+   <%= link_to "材料登録",  new_material_path, class: "recipe" %>
+   <%= link_to "材料一覧",  new_material_path, class: "recipe" %>
    <%= link_to "レシピ作成", new_recipe_path, class: "recipe" %>
-   <%= link_to "みんなのレシピ", chefs_path, class: "recipe" %>
+   <%= link_to "マイレシピ", chefs_path, class: "recipe" %>
+   <%= link_to "みんなのレシピ", recipes_path, class: "recipe" %>
 </div>
 
 <div class="main">
-  <%= form_with model: @material, local: true do |f| %>
-    <table id="table1" border="1">
-      <tr>
-        <td>材料名</td><td>内容量(g)</td><td>仕入れ価格</td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-    </table>
-    <%= f.submit '保存する', class:'btn'%>
-  <% end %>
+  <div class="table">
+    <%= form_with model: @material, local: true do |f| %>
+      <table id="table1" border="1">
+        <tr>
+          <td>材料名</td><td>内容量(g)</td><td>仕入れ価格</td>
+        </tr>
+        <tr>
+          <td> <%= f.text_field :name %>
+          </td>
+          <td><%= f.number_field :amount %>
+          </td>
+          <td><%= f.number_field :price %>
+          </td>
+        </tr>
+      </table>
+    
+      <%= f.submit '保存する', class:'btn'%>
+    <% end %>
+  </div>  
 </div>

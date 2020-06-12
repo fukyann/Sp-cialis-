@@ -14,7 +14,7 @@
 .side-bar .recipe {
   display: block;
   text-decoration: none;
-  color: black;
+  color: #e6925a;
   position: relative;
   padding: 0.25em 0;
   border-radius: 3px;
@@ -63,7 +63,7 @@
   float: left;
 }
 
-.main .dessert .title {
+.main .dessert .title-btn {
   margin-left: 30px;
   font-size: 30px;
   position: relative;
@@ -74,11 +74,19 @@
   float: left;
 }
 
-.main .dessert .title:hover {
+.main .dessert .title-btn-link {
+  text-decoration: none;
+  color: #583002;
+  text-shadow: 2px 2px 10px #e6925a, -2px 2px 10px #e6925a, 2px -2px 10px #e6925a, -2px -2px 10px #e6925a;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.main .dessert .title-btn-link:hover {
   color: #FFF;
 }
 
-.main .dessert .title:after {
+.main .dessert .title-btn:after {
   content: "";
   display: block;
   height: 4px;
@@ -92,5 +100,9 @@
   height: 70px;
   margin-top: 70px;
   margin-left: 200px;
+  overflow: scroll;
+  border: 1px solid;
+  -webkit-box-shadow: 2px 2px 10px #e6925a, -2px 2px 10px #e6925a, 2px -2px 10px #e6925a, -2px -2px 10px #e6925a;
+          box-shadow: 2px 2px 10px #e6925a, -2px 2px 10px #e6925a, 2px -2px 10px #e6925a, -2px -2px 10px #e6925a;
 }
 /*# sourceMappingURL=chefs.css.map */

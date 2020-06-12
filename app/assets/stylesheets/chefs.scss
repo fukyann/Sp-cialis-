@@ -16,7 +16,7 @@
   .recipe{
     display: block;
     text-decoration: none;
-    color : black;
+    color : rgb(230, 146, 90);
     position: relative;
     padding: 0.25em 0;
     border-radius: 3px;
@@ -60,7 +60,7 @@
       background-color: yellowgreen;
       float: left;
     }
-    .title{
+    .title-btn{
       margin-left: 30px;
       font-size: 30px;
       position: relative;
@@ -68,12 +68,20 @@
       border-radius: 3px;
       transition: .4s; 
       float: left;
-    
+      &-link{
+        text-decoration: none;
+        color: rgb(88, 48, 2);
+        text-shadow:  2px  2px 10px rgb(230, 146, 90) ,
+               -2px  2px 10px rgb(230, 146, 90) ,
+                2px -2px 10px rgb(230, 146, 90) ,
+               -2px -2px 10px rgb(230, 146, 90);
+        transition: .4s; 
+      }
+      &-link:hover{
+        color: #FFF;
+      }
     }
-    .title:hover{
-      color: #FFF;
-    }
-    .title:after {
+    .title-btn:after {
       content: "";
       display: block;
       height: 4px;
@@ -86,6 +94,12 @@
       height: 70px;
       margin-top: 70px;
       margin-left: 200px;
+      overflow: scroll;
+      border: 1px solid;
+      box-shadow:  2px  2px 10px rgb(230, 146, 90) ,
+               -2px  2px 10px rgb(230, 146, 90) ,
+                2px -2px 10px rgb(230, 146, 90) ,
+               -2px -2px 10px rgb(230, 146, 90);
       
     }
   }  

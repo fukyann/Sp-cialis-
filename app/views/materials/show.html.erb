@@ -8,132 +8,19 @@
 </div>
 
 <div class="main">
-  <%= form_with model: @material, local: true do |f| %>
+  <div class="table">
     <table id="table1" border="1">
       <tr>
         <td>材料名</td><td>内容量(g)</td><td>仕入れ価格</td>
       </tr>
       <tr>
-        <td> <%= f.text_field :name %>
+        <td> <%= @material.name %>
         </td>
-        <td><%= f.number_field :amount %>
+        <td><%= @material.amount %>
         </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
+        <td><%= @material.price %>
         </td>
       </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-      <tr>
-        <td> <%= f.text_field :name %>
-        </td>
-        <td><%= f.number_field :amount %>
-        </td>
-        <td><%= f.number_field :price %>
-        </td>
-      </tr>
-    </table>
-    <%= f.submit '保存する', class:'btn'%>
-  <% end %>
+    </table> 
+  </div>  
 </div>

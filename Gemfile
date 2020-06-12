@@ -64,3 +64,4 @@ gem 'devise'
 gem 'mini_racer'
 gem "gon"
 gem 'font-awesome-sass'
+gem 'pry-rails'

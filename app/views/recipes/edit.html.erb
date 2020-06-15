@@ -13,7 +13,7 @@
       <div class="image">
         <%= f.file_field :image, id: "cake_image"%>
         <% if @recipe.image.present? %>
-          <%= image_tag @recipe.image, id: :img_prev %>
+          <%= image_tag @recipe.image.url, id: :img_prev %>
         <% else %>
           <%= image_tag "", id: :img_prev %>
         <% end %>

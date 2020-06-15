@@ -1,0 +1,122 @@
+.cake_show{
+  height:1000px;
+  width: 900px;
+  padding:50px;
+  color: #606060;
+  border: 2px solid #a3703e;
+  box-shadow: -2px 15px 15px #ffffff;
+  border-radius: 15px;
+  background: radial-gradient(
+    circle 200px at center,
+    #fdfcfa 0%,
+    #f5dba4 70%,
+    #fcc169 100%);
+  .btn{
+    text-decoration: none;
+    color:rgb(153, 46, 19);
+    float: right;
+    font-size: 30px;
+    padding-right: 10px;
+    transition: .4s;
+  }
+  .btn:hover {
+    color: #FFF;
+  }
+  .heder{
+    display: flex;
+    .image_show{
+      height: 350px;
+      width: 350px;
+      .tag{
+        height: 300px;
+        width: 300px;
+        border: solid 2px #faac4c;
+        border-radius: 50%;
+      }
+    
+    }
+    .name_show{
+      font-size: 30px;
+      width: 400px;
+      color: rgb(153, 46, 19);
+      margin-top: 70px;
+      margin-left: 40px;
+    
+      .explanation_show{
+        font-size: 15px;
+        height: 150px;
+        width: 400px;
+        margin-top:20px;
+        position: relative;
+        padding: 0.25em 1em;
+        border: solid 2px #f19721;
+        border-radius: 3px 0 3px 0;
+        background-color: rgb(248, 215, 142);
+      }
+      .explanation_show:before,.explanation_show:after
+      {
+          content: '';
+          position: absolute;
+          width:10px;
+          height: 10px;
+          border: solid 2px #f19721;
+          border-radius: 50%;
+      }
+      .explanation_show:after {
+          top:-12px;
+          left:-12px;
+      }
+      .explanation_show:before {
+          bottom:-12px;
+          right:-12px;
+      }
+      .explanation_show p {
+          margin: 0; 
+          padding: 0;
+      }      
+    } 
+  }
+  .frame_show{
+    display: flex;
+    margin-top: 10px;
+    .vaiue_show{
+     
+      width: 375px;
+      height: 500px;
+      margin-right: 50px;
+      overflow: scroll;
+      #table_show{
+        background-color:rgb(248, 215, 142);
+        border:#f19721;
+        color: #9c4821;
+      }
+      
+    } 
+    .make_show{
+      background-color: rgb(248, 215, 142);
+      width: 375px;
+      height: 500px;
+      border: solid 3px #f19721;
+      border-radius: 8px;
+      position: relative;
+      margin: 2em 0;
+    }
+    .make_show .box-title {
+      position: absolute;
+      display: inline-block;
+      top: -13px;
+      left: 10px;
+      padding: 0 9px;
+      line-height: 1;
+      font-size: 19px;
+      background: rgb(248, 215, 142);
+      color: #9c4821;
+      font-weight: bold;
+    }
+    .make_show p {
+      margin: 0; 
+      padding: 10px;
+      color: #9c4821;;
+    }
+  }  
+}

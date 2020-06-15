@@ -6,5 +6,4 @@ class Chef < ApplicationRecord
   has_many :recipes
   has_many :materials
   has_many :comments      
-  mount_uploader :image, ImageUploader 
 end

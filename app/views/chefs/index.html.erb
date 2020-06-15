@@ -14,7 +14,7 @@
         <%= image_tag recipe.image.url, class:"tag"%>
       </div>
       <div class="title-btn">
-      <%= link_to recipe.name , new_recipe_path, class:"title-btn-link"%>
+      <%= link_to recipe.name , recipe_path(recipe.id), class:"title-btn-link"%>
       </div>
       <div class="explanation">
         <%= recipe.explanation %>

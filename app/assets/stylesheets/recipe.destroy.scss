@@ -1,0 +1,18 @@
+.success{
+  height: 200px;
+  width: 400px;
+  background-color:#eeaf7c;
+  text-align: center;
+  line-height: 100px;
+  font-size: 30px;
+  margin-left: 300px;
+  .btn{
+    text-decoration: none;
+    color: #770000;
+    transition: .4s;
+  }
+  .btn:hover{
+    color: #FFF;
+  }
+}
+   

@@ -13,12 +13,12 @@
 .cake .image {
   height: 250px;
   width: 250px;
-  border: 1px solid;
   float: left;
 }
 
-.cake .image_btn {
-  margin-top: 270px;
+.cake .image #img_prev {
+  height: 250px;
+  width: 250px;
 }
 
 .cake .name {

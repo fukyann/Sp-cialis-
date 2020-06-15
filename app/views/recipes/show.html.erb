@@ -8,21 +8,23 @@
 </div>
 
 <div class="main">
-  <%= form_with model: @recipe, local: true do |f| %>
-    <div class="cake">
-      <div class="image">
-        <%= f.file_field :image, class:'image_btn'%>
-      </div>
-       
-      <div class="name">
-        <%= f.text_field :name, class: 'title', placeholder: '~ 商品名 ~' %>
-        <div class="explanation">
-          <%= f.text_area :explanation, class: 'explanation', placeholder: '~ 商品紹介 ~'%>
+    <div class="cake_show">
+        <%= link_to '削除', recipe_path(@recipe.id), method: :delete, class:"btn" %>
+        <%= link_to '編集', edit_recipe_path(@recipe.id), method: :get, class:"btn" %>
+      <div class="heder">    
+        <div class="image_show">
+          <%= image_tag @recipe.image.url, class: 'tag' %>
         </div>
-      </div>
-      <div class="frame">
-        <div class="vaiue">
-          <table id="table" border="1">        
+        <div class="name_show">
+          <%= @recipe.name %>
+          <div class="explanation_show">
+            <%= @recipe.explanation %>
+          </div>
+        </div>
+      </div>  
+      <div class="frame_show">
+        <div class="vaiue_show">
+          <table id="table_show" border="1">        
             <tr>
               <td>材料名
               </td>
@@ -32,20 +34,20 @@
               </td>
             </tr>
             <tr>
-              <td> <%= f.text_field :material, class:"column"%>
+              <td> <%= @recipe.materials%>
               </td>
-              <td><%= f.number_field :amount, class:"column" %>
+              <td> <%= @recipe.amount%>
               </td>
-              <td> <%= f.number_field :cost, class:"column"%>
+              <td> <%= @recipe.cost%>
               </td>
             </tr>
           </table>  
-           <%= f.submit '保存する'%>
         </div>
-        <div class="make">
-          <%= f.text_area :make, class: 'make', placeholder:'~ 作り方 ~'%>
+        <div class="make_show">
+           <span class="box-title">作り方</span>
+          <p><%= @recipe.make %></p>
         </div>
       </div>
     </div>  
-  <% end %>  
+ 
 </div>

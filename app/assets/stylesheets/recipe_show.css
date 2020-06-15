@@ -1,0 +1,137 @@
+.cake_show {
+  height: 1000px;
+  width: 900px;
+  padding: 50px;
+  color: #606060;
+  border: 2px solid #a3703e;
+  -webkit-box-shadow: -2px 15px 15px #ffffff;
+          box-shadow: -2px 15px 15px #ffffff;
+  border-radius: 15px;
+  background: radial-gradient(circle 200px at center, #fdfcfa 0%, #f5dba4 70%, #fcc169 100%);
+}
+
+.cake_show .btn {
+  text-decoration: none;
+  color: #992e13;
+  float: right;
+  font-size: 30px;
+  padding-right: 10px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.cake_show .btn:hover {
+  color: #FFF;
+}
+
+.cake_show .heder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cake_show .heder .image_show {
+  height: 350px;
+  width: 350px;
+}
+
+.cake_show .heder .image_show .tag {
+  height: 300px;
+  width: 300px;
+  border: solid 2px #faac4c;
+  border-radius: 50%;
+}
+
+.cake_show .heder .name_show {
+  font-size: 30px;
+  width: 400px;
+  color: #992e13;
+  margin-top: 70px;
+  margin-left: 40px;
+}
+
+.cake_show .heder .name_show .explanation_show {
+  font-size: 15px;
+  height: 150px;
+  width: 400px;
+  margin-top: 20px;
+  position: relative;
+  padding: 0.25em 1em;
+  border: solid 2px #f19721;
+  border-radius: 3px 0 3px 0;
+  background-color: #f8d78e;
+}
+
+.cake_show .heder .name_show .explanation_show:before, .cake_show .heder .name_show .explanation_show:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: solid 2px #f19721;
+  border-radius: 50%;
+}
+
+.cake_show .heder .name_show .explanation_show:after {
+  top: -12px;
+  left: -12px;
+}
+
+.cake_show .heder .name_show .explanation_show:before {
+  bottom: -12px;
+  right: -12px;
+}
+
+.cake_show .heder .name_show .explanation_show p {
+  margin: 0;
+  padding: 0;
+}
+
+.cake_show .frame_show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.cake_show .frame_show .vaiue_show {
+  width: 375px;
+  height: 500px;
+  margin-right: 50px;
+  overflow: scroll;
+}
+
+.cake_show .frame_show .vaiue_show #table_show {
+  background-color: #f8d78e;
+  border: #f19721;
+  color: #9c4821;
+}
+
+.cake_show .frame_show .make_show {
+  background-color: #f8d78e;
+  width: 375px;
+  height: 500px;
+  border: solid 3px #f19721;
+  border-radius: 8px;
+  position: relative;
+  margin: 2em 0;
+}
+
+.cake_show .frame_show .make_show .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #f8d78e;
+  color: #9c4821;
+  font-weight: bold;
+}
+
+.cake_show .frame_show .make_show p {
+  margin: 0;
+  padding: 10px;
+  color: #9c4821;
+}
+/*# sourceMappingURL=recipe_show.css.map */

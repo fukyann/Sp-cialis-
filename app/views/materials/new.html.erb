@@ -9,22 +9,37 @@
 
 <div class="main">
   <div class="table">
-    <%= form_with model: @material, local: true do |f| %>
-      <table id="table1" border="1">
-        <tr>
-          <td>材料名</td><td>内容量(g)</td><td>仕入れ価格</td>
-        </tr>
-        <tr>
-          <td> <%= f.text_field :name %>
-          </td>
-          <td><%= f.number_field :amount %>
-          </td>
-          <td><%= f.number_field :price %>
-          </td>
-        </tr>
+    <%# <%= form_with model: @material, local: true do %> %>
+      行を追加します<input type="button" value="行を追加" id="coladd" onclick="coladd()">
+        
+      <table id="table" border="1">
+          <tr>
+              <td>
+                  材料名
+              </td>
+              <td>
+                 内容量(g)
+              </td>
+              <td>
+                  仕入れ価格
+              </td>
+          </tr>
+          <tr>
+              <td>
+                <input type = "text" name = "name">
+              </td>
+              <td>
+                <input type = "number" name = "amount">
+              </td>
+              <td>
+                <input type = "number" name = "price">
+              </td>
+              <td>
+                <input type="button" value="削除" id="coladd" onclick="coldel(this)">
+              </td>
+          </tr>
+          <input type="submit">
       </table>
-    
-      <%= f.submit '保存する', class:'btn'%>
-    <% end %>
+    <%# <% end %> %>
   </div>  
 </div>

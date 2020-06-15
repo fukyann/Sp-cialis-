@@ -5,12 +5,12 @@ class Chefs::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
   
   def after_sign_up_path_for(resource)
-    chef_path(resource.id)
+    chefs_path(resource.id)
   end
   
   #アカウント編集後のリダイレクト先
   def after_update_path_for(resource)
-    chef_path(resource.id)
+    chefs_path(resource.id)
   end
   # GET /resource/sign_up
   # def new

@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
   def index
-    
-  end
+    @recipes = Recipe.includes(:chef)
+  end  
 end

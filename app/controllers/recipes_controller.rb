@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   
   def index
+    @recipes = Recipe.includes(:chef)
   end  
 
   def new
@@ -8,7 +9,8 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    Recipe.create!(recipe_params)
+    redirect_to chefs_path
   end
   
   def show
@@ -17,7 +19,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :amount, :cost, :image, :explanation, :make)
+    params.require(:recipe).permit(:name, :amount, :cost, :image, :explanation, :make).merge(chef_id: current_chef.id)
   end  
 end
 

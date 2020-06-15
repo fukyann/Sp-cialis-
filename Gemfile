@@ -65,3 +65,5 @@ gem 'mini_racer'
 gem "gon"
 gem 'font-awesome-sass'
 gem 'pry-rails'
+gem 'carrierwave'
+gem 'mini_magick'

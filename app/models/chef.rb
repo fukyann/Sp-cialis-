@@ -5,5 +5,6 @@ class Chef < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :recipes
   has_many :materials
-  has_many :comments       
+  has_many :comments      
+  mount_uploader :image, ImageUploader 
 end

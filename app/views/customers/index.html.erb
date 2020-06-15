@@ -1,26 +1,26 @@
 <div class="side-bar"></div>
 
 <div class="main">
-  <div class="dessert">
-    <div class="image">
-    </div>
-    <div class="title-btn">
-      <%= link_to "テスト", new_recipe_path, class:"title-btn-link"%>
-    </div>
-    <div class="explanation">
+  <p class="name-chef">みんなのレシピ一覧</p>
+  <% @recipes.each do |recipe| %>
+    <div class="dessert">
+      <div class="image">
+        <%= image_tag recipe.image.url, class:"tag"%>
+      </div>
+      <div class="title-btn">
+      <%= link_to recipe.name , recipe_path(recipe.id), class:"title-btn-link"%>
+      <span class="nickname">
+        <a href="/chefs">
+          <span>製作者</span><%= recipe.chef.nickname %>
+        </a>
+      </span> 
+      </div>
+      <div class="explanation">
+        <%= recipe.explanation %> 
+      </div>
       
+      </span>
     </div>
-  </div>
-
-  <div class="dessert">
-    <div class="image">
-    </div>
-    <div class="title-btn">
-      <%= link_to "テスト", new_recipe_path, class:"title-btn-link"%>
-    </div>
-    <div class="explanation">
-      
-    </div>
-  </div>
-
+  <% end %>
+   <%= paginate(@recipes) %>
 </div>

@@ -8,8 +8,14 @@
 </div>
 
 <div class="main">
+  <p class="name-chef"><%= @nickname %>さんのレシピ一覧</p>
   <% @recipes.each do |recipe| %>
     <div class="dessert">
+      <span class="nickname">
+         <a href="/chefs">
+          <span>製作者</span><%= recipe.chef.nickname %>
+         </a>
+      </span> 
       <div class="image">
         <%= image_tag recipe.image.url, class:"tag"%>
       </div>
@@ -17,10 +23,10 @@
       <%= link_to recipe.name , recipe_path(recipe.id), class:"title-btn-link"%>
       </div>
       <div class="explanation">
-        <%= recipe.explanation %>
-        
+        <%= recipe.explanation %> 
       </div>
+       
     </div>
   <% end %>
-
+  <%= paginate(@recipes) %>
 </div>

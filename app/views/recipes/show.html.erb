@@ -8,46 +8,79 @@
 </div>
 
 <div class="main">
-    <div class="cake_show">
-        <%= link_to '削除', recipe_path(@recipe.id), method: :delete, class:"btn" %>
-        <%= link_to '編集', edit_recipe_path(@recipe.id), method: :get, class:"btn" %>
-      <div class="heder">    
-        <div class="image_show">
-          <%= image_tag @recipe.image.url, class: 'tag' %>
-        </div>
-        <div class="name_show">
-          <%= @recipe.name %>
-          <div class="explanation_show">
-            <%= @recipe.explanation %>
-          </div>
-        </div>
-      </div>  
-      <div class="frame_show">
-        <div class="vaiue_show">
-          <table id="table_show" border="1">        
-            <tr>
-              <td>材料名
-              </td>
-              <td>量(g)
-              </td>
-              <td>原価
-              </td>
-            </tr>
-            <tr>
-              <td> <%= @recipe.materials%>
-              </td>
-              <td> <%= @recipe.amount%>
-              </td>
-              <td> <%= @recipe.cost%>
-              </td>
-            </tr>
-          </table>  
-        </div>
-        <div class="make_show">
-           <span class="box-title">作り方</span>
-          <p><%= @recipe.make %></p>
+  <div class="cake_show">
+    <% if chef_signed_in? && current_chef.id == @recipe.chef_id %>
+      <%= link_to '削除', recipe_path(@recipe.id), method: :delete, class:"btn" %>
+      <%= link_to '編集', edit_recipe_path(@recipe.id), method: :get, class:"btn" %>
+    <% end %>  
+    <div class="heder">    
+      <div class="image_show">
+        <%= image_tag @recipe.image.url, class: 'tag' %>
+      </div>
+      <div class="name_show">
+        <%= @recipe.name %>
+        <div class="explanation_show">
+          <%= @recipe.explanation %>
         </div>
       </div>
     </div>  
- 
+    <div class="frame_show">
+      <div class="vaiue_show">
+        <table id="table_show" border="1">        
+          <tr>
+            <td>材料名
+            </td>
+            <td>量(g)
+            </td>
+            <td>原価
+            </td>
+          </tr>
+          <tr>
+            <td> <%= @recipe.materials.name%>
+            </td>
+            <td> <%= @recipe.amount%>
+            </td>
+            <td> <%= @recipe.cost%>
+            </td>
+          </tr>
+        </table>  
+      </div>
+      <div class="make_show">
+          <span class="box-title">作り方</span>
+        <p><%= @recipe.make %></p>
+      </div>
+    </div>
+  </div>  
+  <div class="container">
+    <% if current_chef %>
+      <%= form_with(model: [@recipe, @comment], local: true) do |form| %>
+        <%= form.text_area :comment, placeholder: "コメントする", rows: "2", class: "for" %>
+        <%= form.submit "SEND", class:"send" %>
+      <% end %>
+    <% else current_customer%>
+      <%= form_with(model: [@recipe, @comment], local: true) do |form| %>
+        <%= form.text_area :comment, placeholder: "コメントする", rows: "2", class: "for" %>
+        <%= form.submit "SEND", class:"send"%>
+      <% end %>
+    <% end %>
+
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.chef.nickname, chefs_path(comment.chef_id) %>：</strong>
+            <%= comment.comment %>
+          </p>
+        <% end %>
+      <% else %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= comment.customer.nickname%>：</strong>
+            <%= comment.comment %>
+          </p>
+        <% end %>  
+      <% end %>
+    </div>
+  </div>
 </div>

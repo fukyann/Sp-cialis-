@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :destroy, :edit, :update]
   
   def index
-    @recipes = Recipe.includes(:chef)
+    @recipes = Recipe.includes(:chef).order("created_at DESC").page(params[:page]).per(10)
   end  
 
   def new
@@ -15,6 +15,9 @@ class RecipesController < ApplicationController
   end
   
   def show
+    @comment = Comment.new
+    @comments = @recipe.comments.includes(:chef, :customer)
+   
   end
   
   def edit

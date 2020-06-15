@@ -106,11 +106,15 @@
   color: #9c4821;
 }
 
+.cake_show .frame_show .vaiue_show #table_show td {
+  width: 100px;
+}
+
 .cake_show .frame_show .make_show {
   background-color: #f8d78e;
-  width: 375px;
+  width: 500px;
   height: 500px;
-  border: solid 3px #f19721;
+  border: solid 2px #f19721;
   border-radius: 8px;
   position: relative;
   margin: 2em 0;
@@ -133,5 +137,48 @@
   margin: 0;
   padding: 10px;
   color: #9c4821;
+}
+
+.container {
+  background-color: #fad081;
+  width: 900px;
+  border-radius: 15px;
+  border: 2px solid #a3703e;
+  padding: 10px;
+}
+
+.container .for {
+  width: 750px;
+  border: none;
+}
+
+.container .send {
+  width: 100px;
+  height: 50px;
+  float: right;
+  margin-right: 10px;
+  background-color: #f8d78e;
+  color: #9b500b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container .send:hover {
+  color: #FFF;
+}
+
+.container .comments {
+  color: #9b500b;
+}
+
+.container .comments a {
+  text-decoration: none;
+  color: #ff7b00;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.container .comments a:hover {
+  color: #FFF;
 }
 /*# sourceMappingURL=recipe_show.css.map */
